@@ -77,6 +77,32 @@ extension ViewController: UITableViewDelegate {
         return rowHeight
     }
 
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        return UISwipeActionsConfiguration.init(actions: [UIContextualAction.init(style: UIContextualAction.Style.normal, title: NSLocalizedString("Change Color", comment: "Change color"), handler: {
+            [weak wSelf = self] _,_,completion in
+            guard let strongSelf = wSelf else {
+                completion(false)
+                return
+            }
+            strongSelf.colors[indexPath.row] = strongSelf.generateRandomColor()
+            strongSelf.tableView.reloadRows(at: [indexPath], with: .none)
+            completion(true)
+        })])
+    }
+
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        return UISwipeActionsConfiguration.init(actions: [UIContextualAction.init(style: UIContextualAction.Style.destructive, title: NSLocalizedString("Delete", comment: "delete"), handler: {
+            [weak wSelf = self] (_, _, completion) in
+            guard let strongSelf = wSelf else {
+                completion(false)
+                return
+            }
+            strongSelf.colors.remove(at: indexPath.row)
+            strongSelf.tableView.deleteRows(at: [indexPath], with: .automatic)
+            completion(true)
+        })])
+    }
+
 }
 
 extension ViewController: UIScrollViewDelegate {
