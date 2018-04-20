@@ -10,42 +10,86 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    private var colors: [Int] = []
+    @IBOutlet weak var tableView: UITableView!
+    private var colors: [UIColor] = []
+    private let rowHeight: CGFloat = 100
+    private let initialNumberOfRows = 300
+    private let numberOfRowsToAdd = 8
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        colors = Array(repeating: 3, count: 20)
-        // Do any additional setup after loading the view, typically from a nib.
+        for _ in 0..<initialNumberOfRows {
+            colors.append(generateRandomColor())
+        }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.scrollToRow(at: IndexPath(row: colors.count - numberOfRowsToAdd, section: 0), at: UITableViewScrollPosition.middle, animated: animated)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        colors = []
+        addSomeMoreColors(36)
+        tableView.reloadData()
     }
 
+    private func addSomeMoreColors(_ more: Int) {
+        let addCount = colors.count + more
+        var currentCount = colors.count
+        while (currentCount < addCount) {
+            colors.append(generateRandomColor())
+            currentCount += 1
+        }
+    }
 
+    private func generateRandomColor() -> UIColor {
+        let hue: CGFloat = ( CGFloat(arc4random() % 256) / 256.0)
+        let saturation: CGFloat = ( CGFloat(arc4random() % 128) / 256.0 ) + 0.5
+        let brightness: CGFloat = ( CGFloat(arc4random() % 128) / 256.0 ) + 0.5
+        return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 0.8)
+    }
 }
 
 extension ViewController: UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return colors.count + 1
+        return colors.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "colorCell") ??
             UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "colorCell")
         if let colorView = cell.contentView.viewWithTag(1) {
-            colorView.backgroundColor = UIColor.init(red: 0.3, green: 0.6, blue: 0.9, alpha: 0.8)
-            colorView.layer.cornerRadius = 30
-            
+            let color = colors[indexPath.row]
+            colorView.backgroundColor = color
+            colorView.layer.cornerRadius = 22
         }
         return cell
     }
 
-
 }
 
 extension ViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return rowHeight
+    }
+
+}
+
+extension ViewController: UIScrollViewDelegate {
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let actualPosition = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let threshold = contentHeight - rowHeight * CGFloat(numberOfRowsToAdd)
+        if (actualPosition >= threshold) {
+            addSomeMoreColors(numberOfRowsToAdd)
+            tableView.reloadData()
+        }
+    }
 
 }
 
