@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB680B7E20896B4F00C10843 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB680B7D20896B4F00C10843 /* AppDelegate.swift */; };
+		CB680B8020896B4F00C10843 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB680B7F20896B4F00C10843 /* ViewController.swift */; };
+		CB680B8320896B4F00C10843 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB680B8120896B4F00C10843 /* Main.storyboard */; };
+		CB680B8520896B5100C10843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB680B8420896B5100C10843 /* Assets.xcassets */; };
+		CB680B8820896B5100C10843 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB680B8620896B5100C10843 /* LaunchScreen.storyboard */; };
+		CB680B9320896B5100C10843 /* Matilde_ScrollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB680B9220896B5100C10843 /* Matilde_ScrollerTests.swift */; };
+		CB680B9E20896B5100C10843 /* Matilde_ScrollerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB680B9D20896B5100C10843 /* Matilde_ScrollerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB680B8F20896B5100C10843 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB680B7220896B4F00C10843 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB680B7920896B4F00C10843;
+			remoteInfo = "Matilde Scroller";
+		};
+		CB680B9A20896B5100C10843 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB680B7220896B4F00C10843 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB680B7920896B4F00C10843;
+			remoteInfo = "Matilde Scroller";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB680B7A20896B4F00C10843 /* Matilde Scroller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Matilde Scroller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB680B7D20896B4F00C10843 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CB680B7F20896B4F00C10843 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CB680B8220896B4F00C10843 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB680B8420896B5100C10843 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CB680B8720896B5100C10843 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CB680B8920896B5100C10843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB680B8E20896B5100C10843 /* Matilde ScrollerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Matilde ScrollerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB680B9220896B5100C10843 /* Matilde_ScrollerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matilde_ScrollerTests.swift; sourceTree = "<group>"; };
+		CB680B9420896B5100C10843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB680B9920896B5100C10843 /* Matilde ScrollerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Matilde ScrollerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB680B9D20896B5100C10843 /* Matilde_ScrollerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matilde_ScrollerUITests.swift; sourceTree = "<group>"; };
+		CB680B9F20896B5100C10843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB680B7720896B4F00C10843 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB680B8B20896B5100C10843 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB680B9620896B5100C10843 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB680B7120896B4F00C10843 = {
+			isa = PBXGroup;
+			children = (
+				CB680B7C20896B4F00C10843 /* Matilde Scroller */,
+				CB680B9120896B5100C10843 /* Matilde ScrollerTests */,
+				CB680B9C20896B5100C10843 /* Matilde ScrollerUITests */,
+				CB680B7B20896B4F00C10843 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB680B7B20896B4F00C10843 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB680B7A20896B4F00C10843 /* Matilde Scroller.app */,
+				CB680B8E20896B5100C10843 /* Matilde ScrollerTests.xctest */,
+				CB680B9920896B5100C10843 /* Matilde ScrollerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB680B7C20896B4F00C10843 /* Matilde Scroller */ = {
+			isa = PBXGroup;
+			children = (
+				CB680B7D20896B4F00C10843 /* AppDelegate.swift */,
+				CB680B7F20896B4F00C10843 /* ViewController.swift */,
+				CB680B8120896B4F00C10843 /* Main.storyboard */,
+				CB680B8420896B5100C10843 /* Assets.xcassets */,
+				CB680B8620896B5100C10843 /* LaunchScreen.storyboard */,
+				CB680B8920896B5100C10843 /* Info.plist */,
+			);
+			path = "Matilde Scroller";
+			sourceTree = "<group>";
+		};
+		CB680B9120896B5100C10843 /* Matilde ScrollerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB680B9220896B5100C10843 /* Matilde_ScrollerTests.swift */,
+				CB680B9420896B5100C10843 /* Info.plist */,
+			);
+			path = "Matilde ScrollerTests";
+			sourceTree = "<group>";
+		};
+		CB680B9C20896B5100C10843 /* Matilde ScrollerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CB680B9D20896B5100C10843 /* Matilde_ScrollerUITests.swift */,
+				CB680B9F20896B5100C10843 /* Info.plist */,
+			);
+			path = "Matilde ScrollerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB680B7920896B4F00C10843 /* Matilde Scroller */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB680BA220896B5100C10843 /* Build configuration list for PBXNativeTarget "Matilde Scroller" */;
+			buildPhases = (
+				CB680B7620896B4F00C10843 /* Sources */,
+				CB680B7720896B4F00C10843 /* Frameworks */,
+				CB680B7820896B4F00C10843 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Matilde Scroller";
+			productName = "Matilde Scroller";
+			productReference = CB680B7A20896B4F00C10843 /* Matilde Scroller.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB680B8D20896B5100C10843 /* Matilde ScrollerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB680BA520896B5100C10843 /* Build configuration list for PBXNativeTarget "Matilde ScrollerTests" */;
+			buildPhases = (
+				CB680B8A20896B5100C10843 /* Sources */,
+				CB680B8B20896B5100C10843 /* Frameworks */,
+				CB680B8C20896B5100C10843 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB680B9020896B5100C10843 /* PBXTargetDependency */,
+			);
+			name = "Matilde ScrollerTests";
+			productName = "Matilde ScrollerTests";
+			productReference = CB680B8E20896B5100C10843 /* Matilde ScrollerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CB680B9820896B5100C10843 /* Matilde ScrollerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB680BA820896B5100C10843 /* Build configuration list for PBXNativeTarget "Matilde ScrollerUITests" */;
+			buildPhases = (
+				CB680B9520896B5100C10843 /* Sources */,
+				CB680B9620896B5100C10843 /* Frameworks */,
+				CB680B9720896B5100C10843 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB680B9B20896B5100C10843 /* PBXTargetDependency */,
+			);
+			name = "Matilde ScrollerUITests";
+			productName = "Matilde ScrollerUITests";
+			productReference = CB680B9920896B5100C10843 /* Matilde ScrollerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB680B7220896B4F00C10843 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Raúl Acuña";
+				TargetAttributes = {
+					CB680B7920896B4F00C10843 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					CB680B8D20896B5100C10843 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = CB680B7920896B4F00C10843;
+					};
+					CB680B9820896B5100C10843 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = CB680B7920896B4F00C10843;
+					};
+				};
+			};
+			buildConfigurationList = CB680B7520896B4F00C10843 /* Build configuration list for PBXProject "Matilde Scroller" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB680B7120896B4F00C10843;
+			productRefGroup = CB680B7B20896B4F00C10843 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB680B7920896B4F00C10843 /* Matilde Scroller */,
+				CB680B8D20896B5100C10843 /* Matilde ScrollerTests */,
+				CB680B9820896B5100C10843 /* Matilde ScrollerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB680B7820896B4F00C10843 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB680B8820896B5100C10843 /* LaunchScreen.storyboard in Resources */,
+				CB680B8520896B5100C10843 /* Assets.xcassets in Resources */,
+				CB680B8320896B4F00C10843 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB680B8C20896B5100C10843 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB680B9720896B5100C10843 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB680B7620896B4F00C10843 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB680B8020896B4F00C10843 /* ViewController.swift in Sources */,
+				CB680B7E20896B4F00C10843 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB680B8A20896B5100C10843 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB680B9320896B5100C10843 /* Matilde_ScrollerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB680B9520896B5100C10843 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB680B9E20896B5100C10843 /* Matilde_ScrollerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB680B9020896B5100C10843 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB680B7920896B4F00C10843 /* Matilde Scroller */;
+			targetProxy = CB680B8F20896B5100C10843 /* PBXContainerItemProxy */;
+		};
+		CB680B9B20896B5100C10843 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB680B7920896B4F00C10843 /* Matilde Scroller */;
+			targetProxy = CB680B9A20896B5100C10843 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB680B8120896B4F00C10843 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB680B8220896B4F00C10843 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CB680B8620896B5100C10843 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB680B8720896B5100C10843 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB680BA020896B5100C10843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB680BA120896B5100C10843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB680BA320896B5100C10843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 838BGCU2NY;
+				INFOPLIST_FILE = "Matilde Scroller/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.reacuna.Matilde-Scroller";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB680BA420896B5100C10843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 838BGCU2NY;
+				INFOPLIST_FILE = "Matilde Scroller/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.reacuna.Matilde-Scroller";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CB680BA620896B5100C10843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 838BGCU2NY;
+				INFOPLIST_FILE = "Matilde ScrollerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.reacuna.Matilde-ScrollerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Matilde Scroller.app/Matilde Scroller";
+			};
+			name = Debug;
+		};
+		CB680BA720896B5100C10843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 838BGCU2NY;
+				INFOPLIST_FILE = "Matilde ScrollerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.reacuna.Matilde-ScrollerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Matilde Scroller.app/Matilde Scroller";
+			};
+			name = Release;
+		};
+		CB680BA920896B5100C10843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 838BGCU2NY;
+				INFOPLIST_FILE = "Matilde ScrollerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.reacuna.Matilde-ScrollerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Matilde Scroller";
+			};
+			name = Debug;
+		};
+		CB680BAA20896B5100C10843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 838BGCU2NY;
+				INFOPLIST_FILE = "Matilde ScrollerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.reacuna.Matilde-ScrollerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Matilde Scroller";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB680B7520896B4F00C10843 /* Build configuration list for PBXProject "Matilde Scroller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB680BA020896B5100C10843 /* Debug */,
+				CB680BA120896B5100C10843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB680BA220896B5100C10843 /* Build configuration list for PBXNativeTarget "Matilde Scroller" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB680BA320896B5100C10843 /* Debug */,
+				CB680BA420896B5100C10843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB680BA520896B5100C10843 /* Build configuration list for PBXNativeTarget "Matilde ScrollerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB680BA620896B5100C10843 /* Debug */,
+				CB680BA720896B5100C10843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB680BA820896B5100C10843 /* Build configuration list for PBXNativeTarget "Matilde ScrollerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB680BA920896B5100C10843 /* Debug */,
+				CB680BAA20896B5100C10843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB680B7220896B4F00C10843 /* Project object */;
+}
