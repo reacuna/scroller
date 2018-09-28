@@ -50,6 +50,11 @@ class ViewController: UIViewController {
         let brightness: CGFloat = ( CGFloat(arc4random() % 128) / 256.0 ) + 0.5
         return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 0.8)
     }
+    
+    private func updateColor(atIndexPath indexPath: IndexPath) {
+        self.colors[indexPath.row] = generateRandomColor();
+        self.tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -84,8 +89,7 @@ extension ViewController: UITableViewDelegate {
                 completion(false)
                 return
             }
-            strongSelf.colors[indexPath.row] = strongSelf.generateRandomColor()
-            strongSelf.tableView.reloadRows(at: [indexPath], with: .automatic)
+            strongSelf.updateColor(atIndexPath: indexPath);
             completion(true)
         });
         updateColorAction.backgroundColor = UIColor.init(white: 1, alpha: 0);
@@ -104,6 +108,10 @@ extension ViewController: UIScrollViewDelegate {
             addSomeMoreColors(numberOfRowsToAdd)
             tableView.reloadData()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.updateColor(atIndexPath: indexPath);
     }
 
 }
