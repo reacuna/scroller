@@ -78,16 +78,18 @@ extension ViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        return UISwipeActionsConfiguration.init(actions: [UIContextualAction.init(style: UIContextualAction.Style.normal, title: NSLocalizedString("Change Color", comment: "Change color"), handler: {
+        let updateColorAction = UIContextualAction.init(style: UIContextualAction.Style.normal, title: NSLocalizedString("Change Color", comment: "Change color"), handler: {
             [weak wSelf = self] _,_,completion in
             guard let strongSelf = wSelf else {
                 completion(false)
                 return
             }
             strongSelf.colors[indexPath.row] = strongSelf.generateRandomColor()
-            strongSelf.tableView.reloadRows(at: [indexPath], with: .none)
+            strongSelf.tableView.reloadRows(at: [indexPath], with: .automatic)
             completion(true)
-        })])
+        });
+        updateColorAction.backgroundColor = UIColor.init(white: 1, alpha: 0);
+        return UISwipeActionsConfiguration.init(actions: [updateColorAction])
     }
 
 }
@@ -105,4 +107,3 @@ extension ViewController: UIScrollViewDelegate {
     }
 
 }
-
