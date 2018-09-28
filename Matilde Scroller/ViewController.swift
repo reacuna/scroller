@@ -121,7 +121,10 @@ extension ViewController: UIScrollViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let feedbackGenerator = UISelectionFeedbackGenerator()
+        feedbackGenerator.prepare()
         self.updateColor(atIndexPath: indexPath);
+        feedbackGenerator.selectionChanged()
     }
 
 }
