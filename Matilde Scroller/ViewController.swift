@@ -78,11 +78,7 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return rowHeight
-    }
-
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    private func getUpdateActions(_ indexPath: IndexPath) -> Array<UIContextualAction> {
         let updateColorAction = UIContextualAction.init(style: UIContextualAction.Style.normal, title: NSLocalizedString("Change Color", comment: "Change color"), handler: {
             [weak wSelf = self] _,_,completion in
             guard let strongSelf = wSelf else {
@@ -93,7 +89,21 @@ extension ViewController: UITableViewDelegate {
             completion(true)
         });
         updateColorAction.backgroundColor = UIColor.init(white: 1, alpha: 0);
-        return UISwipeActionsConfiguration.init(actions: [updateColorAction])
+        return [updateColorAction];
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return rowHeight
+    }
+
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let actions = getUpdateActions(indexPath)
+        return UISwipeActionsConfiguration.init(actions: actions)
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let actions = getUpdateActions(indexPath);
+        return UISwipeActionsConfiguration.init(actions: actions)
     }
 
 }
