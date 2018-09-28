@@ -193,13 +193,16 @@
 				TargetAttributes = {
 					CB680B7920896B4F00C10843 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 					};
 					CB680B8D20896B5100C10843 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 						TestTargetID = CB680B7920896B4F00C10843;
 					};
 					CB680B9820896B5100C10843 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 						TestTargetID = CB680B7920896B4F00C10843;
 					};
 				};
@@ -439,7 +442,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.reacuna.Matilde-Scroller";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -457,7 +460,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.reacuna.Matilde-Scroller";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -477,7 +480,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.reacuna.Matilde-ScrollerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Matilde Scroller.app/Matilde Scroller";
 			};
@@ -498,7 +501,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.reacuna.Matilde-ScrollerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Matilde Scroller.app/Matilde Scroller";
 			};
@@ -518,7 +521,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.reacuna.Matilde-ScrollerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Matilde Scroller";
 			};
@@ -538,7 +541,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "me.reacuna.Matilde-ScrollerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Matilde Scroller";
 			};

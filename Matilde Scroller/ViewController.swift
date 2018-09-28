@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.scrollToRow(at: IndexPath(row: colors.count - numberOfRowsToAdd, section: 0), at: UITableViewScrollPosition.middle, animated: animated)
+        tableView.scrollToRow(at: IndexPath(row: colors.count - numberOfRowsToAdd, section: 0), at: UITableView.ScrollPosition.middle, animated: animated)
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,7 +60,7 @@ extension ViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "colorCell") ??
-            UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "colorCell")
+            UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "colorCell")
         if let colorView = cell.contentView.viewWithTag(1) {
             let color = colors[indexPath.row]
             colorView.backgroundColor = color
