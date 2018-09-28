@@ -90,19 +90,6 @@ extension ViewController: UITableViewDelegate {
         })])
     }
 
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        return UISwipeActionsConfiguration.init(actions: [UIContextualAction.init(style: UIContextualAction.Style.destructive, title: NSLocalizedString("Delete", comment: "delete"), handler: {
-            [weak wSelf = self] (_, _, completion) in
-            guard let strongSelf = wSelf else {
-                completion(false)
-                return
-            }
-            strongSelf.colors.remove(at: indexPath.row)
-            strongSelf.tableView.deleteRows(at: [indexPath], with: .automatic)
-            completion(true)
-        })])
-    }
-
 }
 
 extension ViewController: UIScrollViewDelegate {
