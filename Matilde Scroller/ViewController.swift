@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         for _ in 0..<initialNumberOfRows {
             colors.append(generateRandomColor())
         }
+        tableView.showsVerticalScrollIndicator = false;
     }
 
     override func viewWillAppear(_ animated: Bool) {
