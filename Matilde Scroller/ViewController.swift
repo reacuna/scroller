@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     private var colors: [UIColor] = []
     private let rowHeight: CGFloat = 100
     private let initialNumberOfRows = 300
-    private let numberOfRowsToAdd = 8
+    private let numberOfRowsToAdd = 100
 
     override func viewDidLoad() {
         super.viewDidLoad()
