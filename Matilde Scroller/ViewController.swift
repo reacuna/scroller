@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -65,6 +66,22 @@ class ViewController: UIViewController {
     private func updateColor(atIndexPath indexPath: IndexPath) {
         self.colors[indexPath.row] = generateRandomColor();
         self.tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
+    
+    var player: AVAudioPlayer?
+    let twinkle = ["c3", "c3", "g3", "g3", "a4", "a4", "g3", "f3", "f3", "e3", "e3", "d3", "d3", "c3", "g3","g3","f3","f3","e3","e3","d3", "g3","g3","f3","f3","e3","e3","d3","c3", "c3", "g3", "g3", "a4", "a4", "g3", "f3", "f3", "e3", "e3", "d3", "d3", "c3" ]
+    var index = 0
+    func playSound() {
+        if let asset = NSDataAsset(name:twinkle[index]) {
+            do {
+                player = try AVAudioPlayer(data: asset.data, fileTypeHint: AVFileType.mp3.rawValue)
+                player?.play()
+            }
+            catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+        index = (index + 1) % twinkle.count
     }
 }
 
@@ -136,6 +153,7 @@ extension ViewController: UIScrollViewDelegate {
         feedbackGenerator.prepare()
         self.updateColor(atIndexPath: indexPath);
         feedbackGenerator.selectionChanged()
+        playSound()
     }
 
 }
