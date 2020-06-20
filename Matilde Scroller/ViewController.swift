@@ -13,8 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private var colors: [UIColor] = []
     private let rowHeight: CGFloat = 100
-    private let initialNumberOfRows = 300
-    private let numberOfRowsToAdd = 100
+    private let initialNumberOfRows = 100
+    private let numberOfRowsToAdd = 32
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,25 +24,35 @@ class ViewController: UIViewController {
         tableView.showsVerticalScrollIndicator = false;
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.scrollToRow(at: IndexPath(row: colors.count - numberOfRowsToAdd, section: 0), at: UITableView.ScrollPosition.middle, animated: animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.scrollToRow(at: IndexPath(row: colors.count - numberOfRowsToAdd * 2, section: 0), at: UITableView.ScrollPosition.middle, animated: animated)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         colors = []
-        addSomeMoreColors(36)
+        let _ = addSomeMoreColors(initialNumberOfRows)
         tableView.reloadData()
     }
+    
+    func addColorsToTable(_ table: UITableView, _ more: Int) {
+        let updatedIndexes = addSomeMoreColors(more)
+        tableView.beginUpdates()
+        tableView.insertRows(at: updatedIndexes, with: .bottom)
+        tableView.endUpdates()
+    }
 
-    private func addSomeMoreColors(_ more: Int) {
+    private func addSomeMoreColors(_ more: Int) -> [IndexPath] {
         let addCount = colors.count + more
         var currentCount = colors.count
+        var updatedIndexPaths: [IndexPath] = [];
         while (currentCount < addCount) {
             colors.append(generateRandomColor())
+            updatedIndexPaths.append(IndexPath(item: currentCount - 1, section: 0))
             currentCount += 1
         }
+        return updatedIndexPaths;
     }
 
     private func generateRandomColor() -> UIColor {
@@ -112,12 +122,12 @@ extension ViewController: UITableViewDelegate {
 extension ViewController: UIScrollViewDelegate {
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let actualPosition = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
-        let threshold = contentHeight - rowHeight * CGFloat(numberOfRowsToAdd)
-        if (actualPosition >= threshold) {
-            addSomeMoreColors(numberOfRowsToAdd)
-            tableView.reloadData()
+        let totalNumberOfRows = scrollView.contentSize.height / rowHeight
+        let topMostVisibleRowIndex = floor(scrollView.contentOffset.y / rowHeight);
+        let totalVisibleRows = ceil(scrollView.frame.height / rowHeight);
+        let rowsLeftToShow = totalNumberOfRows - totalVisibleRows - topMostVisibleRowIndex;
+        if (rowsLeftToShow <= CGFloat(2 * numberOfRowsToAdd)) {
+            addColorsToTable(tableView, numberOfRowsToAdd)
         }
     }
     
